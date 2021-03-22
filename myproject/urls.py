@@ -1,6 +1,6 @@
-"""myproject URL Configuration
 
-The `urlpatterns` list routes URLs to views. For more information please see:
+# The `urlpatterns` list routes URLs to views. For more information please see:
+"""myproject URL Configuration
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
 Examples:
 Function views
@@ -22,5 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('pages.urls')),
     path('cars/',include('cars.urls')),
+    path('accounts/',include('accounts.urls')),
+    path('contacts/',include('contacts.urls')),
+    path('socialaccounts/',include('allauth.urls')),
 
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
